@@ -1,0 +1,111 @@
+{
+	"name": "Schematic Node",
+	"patterns": [
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#keyword"
+		},
+		{
+			"include": "#number"
+		},
+		{
+			"include": "#identifier"
+		},
+		{
+			"include": "#type"
+		},
+		{
+			"include": "#tag"
+		},
+		{
+			"include": "#event"
+		},
+		{
+			"include": "#string"
+		},
+		{
+			"include": "#code"
+		}
+	],
+	"repository": {
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.single-line.schematic-node",
+					"match": "//.*"
+				},
+				{
+					"name": "comment.multi-line.schematic-node",
+					"begin": "/\\*",
+					"end": "\\*/"
+				}
+			]
+		},
+		"keyword": {
+			"name": "keyword.schematic-node",
+			"match": "\\b(node|as|in|out|on|include|partial|extends)\\b"
+		},
+		"number": {
+			"name": "constant.numeric.schematic-node",
+			"match": "\\.[0-9_]+\\b|\\b(0x[0-9a-fA-F_]+|0c[0-7]+|0b[01]+|[0-9][0-9_]*(\\.[0-9_]+)?)\\b"
+		},
+		"identifier": {
+			"name": "variable.schematic-node",
+			"match": "[a-zA-Z_][a-zA-Z_0-9]*"
+		},
+		"type": {
+			"patterns": [
+				{
+					"name": "support.class.schematic-node",
+					"match": "(?<=:)\\s*[a-zA-Z_][a-zA-Z_0-9]*"
+				},
+				{
+					"begin": "(?<=\\b(in|out)[^\"]*\"[^\"]*\")\\s*\\{",
+					"end": "\\}",
+					"patterns": [
+						{
+							"include": "#string"
+						},
+						{
+							"name": "support.class.schematic-node",
+							"match": "[a-zA-Z_][a-zA-Z_0-9]*\\s*(?=:)"
+						},
+						{
+							"include": "#number"
+						},
+						{
+							"name": "string.quoted.schematic-node",
+							"match": "[a-zA-Z_][a-zA-Z_0-9]*"
+						}
+					]
+				}
+			]
+		},
+		"tag": {
+			"name": "keyword.control.schematic-node",
+			"match": "@[a-zA-Z_0-9]+"
+		},
+		"event": {
+			"name": "keyword.control.schematic-node",
+			"match": "![a-zA-Z_0-9]+"
+		},
+		"string": {
+			"name": "string.quoted.schematic-node",
+			"begin": "\"",
+			"end": "\""
+		},
+		"code": {
+			"name": "code-block.schematic-node",
+			"begin": "`",
+			"end": "`",
+			"patterns": [
+				{
+					"include": "source.lua"
+				}
+			]
+		}
+	},
+	"scopeName": "source.schematic-node"
+}
