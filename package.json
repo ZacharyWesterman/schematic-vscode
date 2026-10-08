@@ -2,7 +2,7 @@
   "name": "schematic",
   "displayName": "Schematic Syntax",
   "description": "Syntax highlighting for the various Schematic syntaxes.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "license": "GPL-3",
   "publisher": "skrunk",
   "engines": {
@@ -16,16 +16,41 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "schematic-node",
-      "aliases": ["Schematic Node", "schematic-node"],
-      "extensions": [".node"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "schematic-node",
-      "scopeName": "source.schematic-node",
-      "path": "./syntaxes/schematic-node.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "schematic-node",
+        "aliases": [
+          "Schematic Node",
+          "schematic-node"
+        ],
+        "extensions": [
+          ".node"
+        ],
+        "configuration": "./node-lang-config.jsonc"
+      },
+      {
+        "id": "schematic-blueprint",
+        "aliases": [
+          "Schematic Blueprint",
+          "schematic-blueprint"
+        ],
+        "extensions": [
+          ".blue"
+        ],
+        "configuration": "./blue-lang-config.jsonc"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "schematic-node",
+        "scopeName": "source.schematic-node",
+        "path": "./syntaxes/schematic-node.tmLanguage.json"
+      },
+      {
+        "language": "schematic-blueprint",
+        "scopeName": "source.schematic-blueprint",
+        "path": "./syntaxes/schematic-blueprint.tmLanguage.json"
+      }
+    ]
   }
 }

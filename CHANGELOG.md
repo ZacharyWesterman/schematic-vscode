@@ -2,8 +2,9 @@
 
 All notable changes to the "schematic" extension will be documented in this file.
 
-## [1.0.1] - 2026-10-08
+## [1.1.0] - 2026-10-08
 
+- Add support for schematic blueprint syntax
 - Fix comments not highlighting correctly inside constraint blocks.
 - Remove unused keywords `partial` and `extends`.
 
