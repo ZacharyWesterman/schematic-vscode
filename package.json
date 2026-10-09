@@ -35,7 +35,7 @@
           "schematic-blueprint"
         ],
         "extensions": [
-          ".blue"
+          ".blueprint"
         ],
         "configuration": "./blue-lang-config.jsonc"
       }
