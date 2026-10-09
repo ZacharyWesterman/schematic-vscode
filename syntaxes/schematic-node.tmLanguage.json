@@ -11,6 +11,12 @@
 			"include": "#number"
 		},
 		{
+			"include": "#color"
+		},
+		{
+			"include": "#boolean"
+		},
+		{
 			"include": "#node_decl"
 		},
 		{
@@ -54,6 +60,14 @@
 			"name": "constant.numeric.schematic-node",
 			"match": "-?(\\.[0-9_]+\\b|\\b(0x[0-9a-fA-F_]+|0c[0-7]+|0b[01]+|[0-9][0-9_]*(\\.[0-9_]+)?)\\b)"
 		},
+		"color": {
+			"name": "constant.color.schematic-node",
+			"match": "#[a-fA-F0-9]*"
+		},
+		"boolean": {
+			"name": "constant.language.schematic-node",
+			"match": "\\b(true|false)\\b"
+		},
 		"identifier": {
 			"name": "variable.schematic-node",
 			"match": "[a-zA-Z_][a-zA-Z_0-9]*"
@@ -76,11 +90,17 @@
 							"include": "#string"
 						},
 						{
+							"include": "#boolean"
+						},
+						{
 							"name": "support.class.schematic-node",
 							"match": "[a-zA-Z_][a-zA-Z_0-9]*\\s*(?=:)"
 						},
 						{
 							"include": "#number"
+						},
+						{
+							"include": "#color"
 						},
 						{
 							"name": "string.quoted.schematic-node",
