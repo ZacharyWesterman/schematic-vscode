@@ -2,6 +2,10 @@
 
 All notable changes to the "schematic" extension will be documented in this file.
 
+## [1.1.1] - 2026-10-11
+
+- Add support for sound and image literals.
+
 ## [1.1.0] - 2026-10-08
 
 - Add syntax for color and boolean literals.
