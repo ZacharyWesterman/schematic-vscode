@@ -73,7 +73,7 @@
 		},
 		"image": {
 			"name": "constant.color.schematic-blueprint",
-			"match": "@\\w*"
+			"match": "%\\w*"
 		},
 		"boolean": {
 			"name": "constant.language.schematic-blueprint",

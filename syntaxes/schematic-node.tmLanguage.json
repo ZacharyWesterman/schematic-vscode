@@ -76,7 +76,7 @@
 		},
 		"image": {
 			"name": "constant.color.schematic-node",
-			"match": "@\\w*"
+			"match": "%\\w*"
 		},
 		"boolean": {
 			"name": "constant.language.schematic-node",
