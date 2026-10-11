@@ -72,7 +72,7 @@
 		},
 		"sound": {
 			"name": "constant.color.schematic-node",
-			"match": "$\\w*"
+			"match": "\\$\\w*"
 		},
 		"image": {
 			"name": "constant.color.schematic-node",
