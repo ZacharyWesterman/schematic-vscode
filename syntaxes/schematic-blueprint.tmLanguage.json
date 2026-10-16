@@ -57,7 +57,7 @@
 		},
 		"operator": {
 			"name": "keyword.schematic-blueprint",
-			"match": "->|[|,.=]"
+			"match": "->|[|,.=:]"
 		},
 		"number": {
 			"name": "constant.numeric.schematic-blueprint",
@@ -85,15 +85,15 @@
 		},
 		"type": {
 			"name": "support.class.schematic-blueprint",
-			"match": "(?<==)\\s*[a-zA-Z_][a-zA-Z_0-9]*(?!\\w)(?!\\s*[(=\"])"
+			"match": "(?<=:)\\s*[a-zA-Z_][a-zA-Z_0-9]*"
 		},
 		"node": {
 			"name": "entity.name.function.schematic-blueprint",
-			"match": "[a-zA-Z_][a-zA-Z_0-9]*(?=\\s*[(\"])"
+			"match": "(?<==)\\s*[a-zA-Z_][a-zA-Z_0-9]*"
 		},
 		"assignment": {
 			"name": "variable.schematic-blueprint",
-			"match": "[a-zA-Z_][a-zA-Z_0-9]*(?=\\s*=)"
+			"match": "[a-zA-Z_][a-zA-Z_0-9]*(?=\\s*:)"
 		},
 		"field": {
 			"name": "variable.schematic-blueprint",

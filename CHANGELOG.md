@@ -2,6 +2,10 @@
 
 All notable changes to the "schematic" extension will be documented in this file.
 
+## [1.1.2] - 2026-10-16
+
+- Update syntax highlighting to match latest language definition.
+
 ## [1.1.1] - 2026-10-11
 
 - Add support for sound and image literals.
