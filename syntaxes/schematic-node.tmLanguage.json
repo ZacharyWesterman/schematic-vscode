@@ -144,7 +144,7 @@
 		"string": {
 			"name": "string.quoted.schematic-node",
 			"begin": "\"",
-			"end": "\""
+			"end": "(?<!\\)\""
 		},
 		"code": {
 			"name": "code-block.schematic-node",
