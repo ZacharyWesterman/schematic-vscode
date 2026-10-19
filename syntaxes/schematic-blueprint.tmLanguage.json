@@ -20,7 +20,7 @@
 			"include": "#image"
 		},
 		{
-			"include": "#boolean"
+			"include": "#literal"
 		},
 		{
 			"include": "#field"
@@ -75,9 +75,9 @@
 			"name": "constant.color.schematic-blueprint",
 			"match": "%\\w*"
 		},
-		"boolean": {
+		"literal": {
 			"name": "constant.language.schematic-blueprint",
-			"match": "\\b(true|false)\\b"
+			"match": "\\b(true|false|none)\\b"
 		},
 		"identifier": {
 			"name": "meta.variable.schematic-blueprint",
