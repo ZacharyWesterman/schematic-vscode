@@ -144,7 +144,10 @@
 		"string": {
 			"name": "string.quoted.schematic-node",
 			"begin": "\"",
-			"end": "(?<!\\)\""
+			"patterns": [{
+				"name": "constant.character.escape.schematic-node",
+				"match": "\\\\."
+			}]
 		},
 		"code": {
 			"name": "code-block.schematic-node",

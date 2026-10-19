@@ -102,7 +102,11 @@
 		"string": {
 			"name": "string.quoted.schematic-blueprint",
 			"begin": "\"",
-			"end": "(?<!\\)\""
+			"end": "\"",
+			"patterns": [{
+				"name": "constant.character.escape.schematic-blueprint",
+				"match": "\\\\."
+			}]
 		}
 	},
 	"scopeName": "source.schematic-blueprint"
