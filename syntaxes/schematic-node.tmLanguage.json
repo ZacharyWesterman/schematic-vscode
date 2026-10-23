@@ -60,7 +60,7 @@
 		},
 		"keyword": {
 			"name": "keyword.schematic-node",
-			"match": "\\b(node|as|in|out|on|include)\\b"
+			"match": "\\b(node|as|in|out|on|include|requires)\\b"
 		},
 		"number": {
 			"name": "constant.numeric.schematic-node",
